@@ -6,6 +6,7 @@ def call(dockerRepoName, imageName, portNum) {
         steps {
           sh 'echo ${dockerRepoName}'
           sh 'pwd'
+          sh 'ls'
           sh 'pip install -r ${dockerRepoName}/requirements.txt'
         }
       }
