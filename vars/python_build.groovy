@@ -23,7 +23,7 @@ def call(dockerRepoName, imageName, portNum) {
       }
       stage('Zip Artifacts') {
         steps {
-          sh "zip app.zip *.py"
+          sh "zip -r app.zip ${dockerRepoName}"
         }
         post {
           always {
