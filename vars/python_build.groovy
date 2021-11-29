@@ -9,7 +9,7 @@ def call(dockerRepoName, imageName, portNum) {
       }
       stage('Python Lint') {
         steps {
-          sh 'pylint-fail-under --fail-under 5 ${dockerRepoName}/app.py'
+          sh "pylint-fail-under --fail-under 5 ${dockerRepoName}/app.py"
         }
       }
       stage('Package') {
