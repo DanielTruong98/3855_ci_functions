@@ -4,6 +4,8 @@ def call(dockerRepoName, imageName, portNum) {
     stages {
       stage('Build') {
         steps {
+          sh 'echo ${dockerRepoName}'
+          sh 'pwd'
           sh 'pip install -r ${dockerRepoName}/requirements.txt'
         }
       }
